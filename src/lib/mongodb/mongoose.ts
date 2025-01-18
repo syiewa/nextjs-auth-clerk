@@ -10,6 +10,7 @@ export const connect = async () => {
   }
 
   try {
+    console.log("Connecting to MongoDB..."+process.env.MONGODB_URI);
     await mongoose.connect(process.env.MONGODB_URI as string, {
       dbName: "nextjs-auth-app",
     });
